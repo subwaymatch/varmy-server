@@ -1,5 +1,5 @@
-let express = require('express')
-let router = express.Router
+let express = require('express');
+let router = express.Router();
 
 router.get('/v1/list', function(req, res) {
 	res.json({
@@ -12,6 +12,6 @@ router.get('/v1/list', function(req, res) {
 			}
 		]
 	})
-})
+});
 
-module.exports = router
+module.exports = router;
