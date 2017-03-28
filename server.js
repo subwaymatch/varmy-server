@@ -28,7 +28,7 @@ app.use(session({
 AuthenticationController.init(app);
 
 // Routers
-let APIRouter = require(__dirname + '/app/routes/APIRouter.js');
+let APIRouter = require(path.join(__dirname, '/app/routes/APIRouter.js'));
 let MainRouter = require(path.join(__dirname, '/app/routes/MainRouter.js'));
 
 // Public files directory
