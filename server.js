@@ -1,15 +1,35 @@
-let express = require('express');
-let app = express();
-let bodyParser = require('body-parser');
-
+const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
+const session = require('express-session');
+const redis = require('redis');
+const RedisStore = require('connect-redis')(session);
+const AuthenticationController = require(path.join(__dirname, '/app/controllers/authentication.js'));
 
-// Use body-parser
-app.use(bodyParser.json());
+const app = express();
+
+app.use(bodyParser.urlencoded({
+	extended: false
+}));
+
+// This should be placed before initializing passport in AuthenticationController
+app.use(session({
+	store: new RedisStore({
+		host: 'localhost',
+		port: 6379,
+		client: redis.createClient()
+	}),
+	secret: 'some secret key',
+	resave: false,
+	saveUninitialized: false
+}));
+
+// Initialize authentication controller
+AuthenticationController.init(app);
 
 // Routers
-let APIRouter = require(__dirname + '/app/routers/APIRouter.js');
-let MainRouter = require(path.join(__dirname, '/app/routers/MainRouter.js'));
+let APIRouter = require(__dirname + '/app/routes/APIRouter.js');
+let MainRouter = require(path.join(__dirname, '/app/routes/MainRouter.js'));
 
 // Public files directory
 app.use(express.static('public'));
@@ -18,7 +38,7 @@ app.use(express.static('public'));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, '/app/views'));
 
-// Route API calls to appropriate routers
+// Route API calls to appropriate routes
 app.use('/api/v1', APIRouter);
 app.use('/', MainRouter);
 

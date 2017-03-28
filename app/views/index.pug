@@ -1,7 +1,7 @@
-doctype html
-html
-	head
-		title #{title}
-		block scripts
-	body
-		p Hello World
+extends layout.pug
+
+block scripts
+
+block content
+	p Hello World
+	a(href='/login') Log In
