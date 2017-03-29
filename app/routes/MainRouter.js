@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
+const UserController = require('./../controllers/users.js'); 
 
 router.get('/', function(req, res) {
 	res.render('index', {
@@ -8,14 +9,10 @@ router.get('/', function(req, res) {
 	});
 });
 
-router.get('/login', function(req, res) {
-	res.render('login');
-});
-
-router.get('/logout', function(req, res) {
-	req.logout();
-	res.redirect('/');
-});
+router.get('/login', UserController.renderLogInPage);
+router.get('/signup', UserController.renderSignUpPage); 
+router.post('/signup', UserController.signUp); 
+router.get('/logout', UserController.logout);
 
 router.post('/login', passport.authenticate('local', {
 	successRedirect: '/profile',
