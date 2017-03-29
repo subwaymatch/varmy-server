@@ -17,8 +17,21 @@ UserController.renderSignUpPage = function(req, res) {
 };
 
 UserController.signUp = function(req, res) {
-	console.log('sign up'); 
-	res.redirect('/'); 
+	console.log('UserController.signUp()'); 
+	console.log(req.body); 
+
+	User.create(req.body, (err) => {
+		if (err) {
+			console.log('err:'); 
+			console.log(err); 
+			res.redirect('/'); 
+		}
+
+		else {
+			console.log('Successful'); 
+			res.redirect('/login'); 
+		}
+	});
 };
 
 UserController.logout = function(req, res) {
@@ -28,7 +41,7 @@ UserController.logout = function(req, res) {
 
 UserController.renderProfilePage = function(req, res) {
 	res.render('user/profile', {
-		username: req.user.username
+		email: req.user.email
 	});
 };
 

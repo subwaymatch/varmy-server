@@ -4,8 +4,8 @@ const authenticationMiddleware = require('./../middlewares/authentication.js');
 
 let AuthenticationController = {};
 
-function findUser(username, callback) {
-	if (username === user.username) {
+function findUser(email, callback) {
+	if (email === user.email) {
 		return callback(null, user);
 	}
 
@@ -14,7 +14,7 @@ function findUser(username, callback) {
 
 // Test data
 var user = {
-	username: 'user',
+	email: 'a@b.com',
 	password: 'pass',
 	id: 1
 };
@@ -26,18 +26,20 @@ var user = {
  */
 AuthenticationController.init = function(app) {
 	passport.serializeUser(function(user, callback) {
-		callback(null, user.username);
+		callback(null, user.email);
 	});
 
-	passport.deserializeUser(function(username, callback) {
-		findUser(username, callback);
+	passport.deserializeUser(function(email, callback) {
+		findUser(email, callback);
 	});
 
 	passport.authenticationMiddleware = authenticationMiddleware;
 
-	passport.use(new LocalStrategy(
-		function(username, password, done) {
-			findUser(username, function(err, user) {
+	passport.use(new LocalStrategy({
+			usernameField: 'email'
+		},
+		function(email, password, done) {
+			findUser(email, function(err, user) {
 				if (err) {
 					return done(err);
 				}
