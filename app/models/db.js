@@ -6,6 +6,8 @@ var db = {};
 let mongoURI = 'mongodb://localhost/vocapin'; 
 
 db.init = function() {
+	mongoose.Promise = global.Promise; 
+
 	// Create the database connection
 	mongoose.connect(mongoURI); 
 }

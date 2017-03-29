@@ -17,9 +17,6 @@ UserController.renderSignUpPage = function(req, res) {
 };
 
 UserController.signUp = function(req, res) {
-	console.log('UserController.signUp()'); 
-	console.log(req.body); 
-
 	User.create(req.body, (err, newUser) => {
 		if (err) {
 			console.log('err:'); 
@@ -30,7 +27,6 @@ UserController.signUp = function(req, res) {
 		else {
 			console.log('Successful'); 
 			res.redirect('/login'); 
-			console.log(newUser); 
 		}
 	});
 };

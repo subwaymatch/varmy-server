@@ -5,6 +5,7 @@ const session = require('express-session');
 const redis = require('redis');
 const RedisStore = require('connect-redis')(session);
 const AuthenticationController = require(path.join(__dirname, '/app/controllers/authentication.js'));
+const db = require(path.join(__dirname, '/app/models/db')); 
 
 const app = express();
 
@@ -25,6 +26,9 @@ app.use(session({
 	resave: false,
 	saveUninitialized: false
 }));
+
+// Initialize db
+db.init();
 
 // Initialize authentication controller
 AuthenticationController.init(app);

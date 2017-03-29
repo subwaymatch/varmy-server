@@ -9,17 +9,14 @@ var userSchema = new Schema({
 	password: String
 }); 
 
+var User = mongoose.model('User', userSchema); 
+
 /**
  * Create a new user
  */
 userSchema.statics.create = function(user, callback) {
-	console.log('userSchema.statics.create()'); 
-	console.log('user.email: ' + user.email); 
-
 	// If valid email format
 	if (validator.isEmail(user.email) === true) {
-		console.log('Valid email!'); 
-
 		// Hash password
 		user.password = User.hash(user.password); 
 
@@ -27,7 +24,7 @@ userSchema.statics.create = function(user, callback) {
 		var newUser = new User(user); 
 
 		// Save the new User object to database
-		newUser.save(function(err) {
+		newUser.save(function(err, insertedUser, rowsAffected) {
 			// If no error, err object will be null
 			callback(err, newUser); 
 		});
@@ -35,8 +32,6 @@ userSchema.statics.create = function(user, callback) {
 	
 	// If invalid email format
 	else {
-		console.log('Invalid email format'); 
-		
 		let errObj = {
 			name: 'InvalidFormatError',
 			message: 'An invalid email format. '
@@ -46,14 +41,8 @@ userSchema.statics.create = function(user, callback) {
 	}
 };
 
-userSchema.methods.getNoteBooks = function(cb) {
-
-}; 
-
 userSchema.statics.hash = function(password) {
 	return crypto.createHash('sha1').update(password).digest('base64');  
 }; 
-
-var User = mongoose.model('User', userSchema); 
 
 module.exports = User;
