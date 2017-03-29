@@ -8,8 +8,8 @@ UserController.renderLogInPage = function(req, res) {
 };
 
 UserController.login = passport.authenticate('local', {
-	successRedirect: '/profile',
-	failureRedirect: '/'
+	successReturnToOrRedirect: '/profile',
+	failureRedirect: '/login'
 }); 
 
 UserController.renderSignUpPage = function(req, res) {
