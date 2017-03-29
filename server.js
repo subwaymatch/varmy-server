@@ -8,6 +8,8 @@ const AuthenticationController = require(path.join(__dirname, '/app/controllers/
 
 const app = express();
 
+var port = process.env.PORT || 3000; 
+
 app.use(bodyParser.urlencoded({
 	extended: false
 }));
@@ -42,6 +44,6 @@ app.set('views', path.join(__dirname, '/app/views'));
 app.use('/api/v1', APIRouter);
 app.use('/', MainRouter);
 
-app.listen(3000, function() {
-	console.log('Listening to port 3000. ')
+app.listen(port, function() {
+	console.log(`Listening to port ${port}. `)
 });
