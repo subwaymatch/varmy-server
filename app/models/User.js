@@ -26,7 +26,7 @@ userSchema.statics.create = function(user, callback) {
 		// Save the new User object to database
 		newUser.save(function(err, insertedUser, rowsAffected) {
 			// If no error, err object will be null
-			callback(err, newUser); 
+			return callback(err, newUser); 
 		});
 	} 
 	
@@ -37,7 +37,7 @@ userSchema.statics.create = function(user, callback) {
 			message: 'An invalid email format. '
 		}; 
 
-		callback(errObj, null); 
+		return callback(errObj, null); 
 	}
 };
 
