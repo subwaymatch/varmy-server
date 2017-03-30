@@ -2,7 +2,27 @@ extends layout.pug
 
 block scripts
 
+block header
+	.container
+		.desktop-12.column
+			h1 Vocabulary List
+
 block content
-	p Hello World
-	a(href='/login') Log In
-	a(href='/signup') Sign Up
+	.desktop-12.column
+		.list-notes
+			each note in noteList
+				a.item(href='#')
+					h3= note.title
+					.button.price(class=(note.price == 0) ? 'free' : '')= (note.price == 0) ? 'Free' : '$' + note.price
+
+	.clear
+	
+	if (user)
+		.desktop-12.column
+			a(href='/profile') Profile Page	
+	else			
+		.desktop-6.column
+			a(href='/login') Log In
+
+		.desktop-6.column
+			a(href='/signup') Sign Up

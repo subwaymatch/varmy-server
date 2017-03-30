@@ -1,12 +1,18 @@
 extends ../layout.pug
 
+block header
+	div.container
+		div.desktop-12.column
+			.logo-img-wrapper
+				a(href='/')
+					img.logo(src='images/logo_vocapin.png')
+	
 block content
-	h2 Sign In
+	.desktop-12.column
+		form(action='/login' method='post').user-form
+			input#username(name='email' type='email' placeholder='your@email.com')
+			input#password(name='password' type='password' placeholder='Password')
+			input(type='submit' value='Sign In').button.full
 
-	form(action='/login' method='post').user-form
-		input#username(name='email' type='email' placeholder='your@email.com')
-		input#password(name='password' type='password' placeholder='Password')
-		input(type='submit' value='Sign In').button.full
-
-	a(href='/signup') Sign Up	
+		a(href='/signup') Sign Up	
 

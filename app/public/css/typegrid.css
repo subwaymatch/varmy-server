@@ -176,52 +176,40 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .desktop-1,
-  .tablet-1 {
+  .desktop-1 {
     width: 280px;
   }
-  .desktop-2,
-  .tablet-2 {
+  .desktop-2 {
     width: 280px;
   }
-  .desktop-3,
-  .tablet-3 {
+  .desktop-3 {
     width: 280px;
   }
-  .desktop-4,
-  .tablet-4 {
+  .desktop-4 {
     width: 280px;
   }
-  .desktop-5,
-  .tablet-5 {
+  .desktop-5 {
     width: 280px;
   }
-  .desktop-6,
-  .tablet-6 {
+  .desktop-6 {
     width: 280px;
   }
-  .desktop-7,
-  .tablet-7 {
+  .desktop-7 {
     width: 280px;
   }
-  .desktop-8,
-  .tablet-8 {
+  .desktop-8 {
     width: 280px;
   }
-  .desktop-9,
-  .tablet-9 {
+  .desktop-9 {
     width: 280px;
   }
-  .desktop-10,
-  .tablet-10 {
+  .desktop-10 {
     width: 280px;
   }
-  .desktop-11,
-  .tablet-11 {
+  .desktop-11 {
     width: 280px;
   }
-  .desktop-12,
-  .tablet-12 {
+  .desktop-12 {
     width: 280px;
   }
   .offset-1 {
@@ -258,69 +246,47 @@
     margin-left: 0;
   }
   .pull-1,
-  .push-1,
-  .tablet-pull-1,
-  .tablet-push-1 {
+  .push-1 {
     left: 0;
   }
   .pull-2,
-  .push-2,
-  .tablet-pull-2,
-  .tablet-push-2 {
+  .push-2 {
     left: 0;
   }
   .pull-3,
-  .push-3,
-  .tablet-pull-3,
-  .tablet-push-3 {
+  .push-3 {
     left: 0;
   }
   .pull-4,
-  .push-4,
-  .tablet-pull-4,
-  .tablet-push-4 {
+  .push-4 {
     left: 0;
   }
   .pull-5,
-  .push-5,
-  .tablet-pull-5,
-  .tablet-push-5 {
+  .push-5 {
     left: 0;
   }
   .pull-6,
-  .push-6,
-  .tablet-pull-6,
-  .tablet-push-6 {
+  .push-6 {
     left: 0;
   }
   .pull-7,
-  .push-7,
-  .tablet-pull-7,
-  .tablet-push-7 {
+  .push-7 {
     left: 0;
   }
   .pull-8,
-  .push-8,
-  .tablet-pull-8,
-  .tablet-push-8 {
+  .push-8 {
     left: 0;
   }
   .pull-9,
-  .push-9,
-  .tablet-pull-9,
-  .tablet-push-9 {
+  .push-9 {
     left: 0;
   }
   .pull-10,
-  .push-10,
-  .tablet-pull-10,
-  .tablet-push-10 {
+  .push-10 {
     left: 0;
   }
   .pull-11,
-  .push-11,
-  .tablet-pull-11,
-  .tablet-push-11 {
+  .push-11 {
     left: 0;
   }
   .mobile-one-fifth {
@@ -341,52 +307,40 @@
   .container {
     width: 400px;
   }
-  .desktop-1,
-  .tablet-1 {
+  .desktop-1 {
     width: 100%;
   }
-  .desktop-2,
-  .tablet-2 {
+  .desktop-2 {
     width: 100%;
   }
-  .desktop-3,
-  .tablet-3 {
+  .desktop-3 {
     width: 100%;
   }
-  .desktop-4,
-  .tablet-4 {
+  .desktop-4 {
     width: 100%;
   }
-  .desktop-5,
-  .tablet-5 {
+  .desktop-5 {
     width: 100%;
   }
-  .desktop-6,
-  .tablet-6 {
+  .desktop-6 {
     width: 100%;
   }
-  .desktop-7,
-  .tablet-7 {
+  .desktop-7 {
     width: 100%;
   }
-  .desktop-8,
-  .tablet-8 {
+  .desktop-8 {
     width: 100%;
   }
-  .desktop-9,
-  .tablet-9 {
+  .desktop-9 {
     width: 100%;
   }
-  .desktop-10,
-  .tablet-10 {
+  .desktop-10 {
     width: 100%;
   }
-  .desktop-11,
-  .tablet-11 {
+  .desktop-11 {
     width: 100%;
   }
-  .desktop-12,
-  .tablet-12 {
+  .desktop-12 {
     width: 100%;
   }
   .mobile-one-fifth {
