@@ -1,0 +1,285 @@
+/*--------------------------------------------------------------------------
+   
+
+	Vocapin
+
+	Vocapin web-app
+
+	0. YUI Library is used for CSS reset (http://yuilibrary.com/yui/docs/cssreset/)
+	1. Body
+	2. Typography
+	3. Pages
+
+
+--------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------
+	1. Body
+--------------------------------------------------------------------------*/
+
+html {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#49e1df+0,5695e7+100 */
+	background: #49e1df; /* Old browsers */
+	background: -moz-linear-gradient(top, #49e1df 0%, #5695e7 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #49e1df 0%,#5695e7 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #49e1df 0%,#5695e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49e1df', endColorstr='#5695e7',GradientType=0 ); /* IE6-9 */
+	min-height: 100%; 
+}
+
+body {
+	color: #fff;
+	font-family: 'Roboto';
+	font-size: 28px;
+	line-height: 46px;
+	font-weight: 300; 
+	-webkit-font-smoothing: antialiased;
+	/* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
+@media screen and (max-width: 767px) { 
+	body {
+		font-size: 12px;
+		line-height: 23px;
+	}
+}
+
+
+
+/*--------------------------------------------------------------------------
+	2. Typography
+--------------------------------------------------------------------------*/
+
+/* Links */
+a,
+a:visited {
+	color: #fff; 
+	text-decoration: none;
+	outline: 0;
+}
+
+a:hover,
+a:focus { color: #fff; }
+p a,
+p a:visited { line-height: inherit; }
+
+/* Visibility */
+.hide { display: none !important; }
+
+/* Selection Highlighted Text */
+::selection {
+	background: #22eedd;
+	color: white;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #22eedd;
+	color: white;
+	text-shadow: none;
+}
+
+
+/* Formatting */
+em,
+i,
+.italic { font-style: italic; }
+b, strong { font-weight: bold; }
+
+.underline {
+	display: inline-block;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #22eedd;
+}
+
+/* Colors */
+.font-color-primary { color: #22eedd; }
+.background-color-primary { background: #22eedd; }}
+
+
+/*--------------------------------------------------------------------------
+	3. Pages
+--------------------------------------------------------------------------*/
+
+	/*---------------------------------------------------
+			3.0 Common Elements
+	---------------------------------------------------*/
+
+	/* Responsive images */
+	img { max-width: 100%; }
+
+	/* Used to remove whitespace below an image */
+	.remove-line-height { line-height: 0; }
+
+	/* Vertical spacing */
+	.padding-vertical { 
+		padding-top: 50px; 
+		padding-bottom: 50px;  
+	}
+
+	/* Buttons */
+	button,
+	.button,
+	a.button {
+		color: white;
+
+		/* Fallback for web browsers that don't support RGBa */
+		background-color: rgb(0, 0, 0);
+		/* RGBa with 0.6 opacity */
+		background-color: rgba(0, 0, 0, 0.1);
+		/* For IE 8*/
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+		text-align: center;
+		padding: 20px 25px 18px 25px;
+		cursor: pointer;
+		display: inline-block;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		-o-border-radius: 4px;
+		border-radius: 4px;
+	}
+
+		button.small,
+		.button.small,
+		a.button.small {
+			font-size: 14px;
+			line-height: 24px;
+			padding: 16px 24px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			-ms-border-radius: 3px;
+			-o-border-radius: 3px;
+			border-radius: 3px;
+		}
+
+		button.full,
+		.button.full,
+		a.button.full {
+			display: block;
+			width: 100%;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			-ms-border-radius: 5px;
+			-o-border-radius: 5px;
+			border-radius: 5px;
+			padding: 30px 40px;
+		}
+
+			button:hover,
+			.button:hover,
+			a.button:hover {
+				
+			 }
+
+
+
+	/* Forms */
+	form p,
+	label,
+	legend {
+		font-size: 15px;
+		line-height: 24px;
+	}
+
+	label {
+		display: block;
+		color: #111;
+		font-size: 13px;
+		line-height: 23px;
+		margin: 20px 0;
+	}
+
+	input[type=text],
+	input[type=url],
+	input[type=tel],
+	input[type=number],
+	input[type=color],
+	input[type=email], 
+	input[type=password], 
+	textarea,
+	select {
+		width: 100%;
+		padding: 20px 0;
+		color: #fff;
+		background: transparent; 
+		border: none; 
+		border-bottom: 1px solid #ddd;
+		outline: none;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+		input[type=text]:focus,
+		input[type=url]:focus,
+		input[type=tel]:focus,
+		input[type=number]:focus,
+		input[type=color]:focus,
+		input[type=email]:focus, 
+		input[type=password]:focus, 
+		textarea:focus,
+		select:focus {
+			color: #fff; 
+			border-bottom-style: dashed;
+		}
+
+
+
+	/* Placeholder */
+
+	::-webkit-input-placeholder { 
+		color: #fff; 
+	}
+	::-moz-placeholder { 
+		color: #fff; 
+	}
+	:-ms-input-placeholder { 
+		color: #fff; 
+	}
+	input:-moz-placeholder { 
+		color: #fff; 
+	}
+	
+
+	/* Input - submit */
+	input[type=submit] {
+		border: none; 
+	}
+
+
+h1 {
+	font-size: 18px; 
+	font-weight: 400; 
+	letter-spacing: 3px; 
+	text-transform: uppercase; 
+	margin-top: 80px; 
+	text-align: center; 
+}
+
+	h1 img {
+		display: inline-block;
+		width: 100px; 
+	}
+
+	h1 a {
+		color: #fff;
+	}
+
+
+h2 {
+	font-size: 26px; 
+	margin-top: 30px; 
+}
+
+form.user-form {
+	
+}
+
+	form.user-form input {
+		margin-top: 30px; 
+	}
