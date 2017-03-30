@@ -38,7 +38,7 @@ let APIRouter = require(path.join(__dirname, '/app/routes/APIRouter.js'));
 let MainRouter = require(path.join(__dirname, '/app/routes/MainRouter.js'));
 
 // Public files directory
-app.use(express.static('public'));
+app.use(express.static('app/public'));
 
 // Template engine
 app.set('view engine', 'pug');
