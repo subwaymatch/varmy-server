@@ -93,10 +93,6 @@ b, strong { font-weight: bold; }
 	border-bottom: 1px solid #22eedd;
 }
 
-/* Colors */
-.font-color-primary { color: #22eedd; }
-.background-color-primary { background: #22eedd; }}
-
 
 /*--------------------------------------------------------------------------
 	3. Pages
@@ -128,8 +124,6 @@ b, strong { font-weight: bold; }
 		background-color: rgb(0, 0, 0);
 		/* RGBa with 0.6 opacity */
 		background-color: rgba(0, 0, 0, 0.1);
-		/* For IE 8*/
-		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 		text-align: center;
 		padding: 20px 25px 18px 25px;
 		cursor: pointer;
@@ -173,7 +167,10 @@ b, strong { font-weight: bold; }
 			button:hover,
 			.button:hover,
 			a.button:hover {
-				
+				/* Fallback for web browsers that don't support RGBa */
+				background-color: rgb(0, 0, 0);
+				/* RGBa with 0.6 opacity */
+				background-color: rgba(0, 0, 0, 0.15);
 			 }
 
 
@@ -209,7 +206,6 @@ b, strong { font-weight: bold; }
 		background: transparent; 
 		border: none; 
 		border-bottom: 1px solid #ddd;
-		outline: none;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -226,6 +222,7 @@ b, strong { font-weight: bold; }
 		select:focus {
 			color: #fff; 
 			border-bottom-style: dashed;
+			outline: none;
 		}
 
 
