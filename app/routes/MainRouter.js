@@ -20,5 +20,6 @@ router.get('/profile', ensureLoggedIn('/login'), UserController.renderProfilePag
 
 // NoteBook related routes
 router.get('/notes', ensureLoggedIn('/login'), NotesController.renderUserNotes); 
+router.get('/notebook', NotesController.renderNoteBook); 
 
 module.exports = router;

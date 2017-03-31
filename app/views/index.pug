@@ -11,7 +11,7 @@ block content
 	.desktop-12.column
 		.list-notes
 			each note in noteList
-				a.item(href='#')
+				a.item(href='/notebook')
 					h3= note.title
 					.button.price(class=(note.price == 0) ? 'free' : '')= (note.price == 0) ? 'Free' : '$' + note.price
 
