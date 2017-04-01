@@ -1,7 +1,8 @@
 let NoteBook = {};
+const notebook = require('./../tests/vocab-data');
 
-NoteBook.getById = function(id) {
-	// Return a notebook by id
+NoteBook.getById = function(id, callback) {
+	callback(notebook);
 };
 
 NoteBook.getByUser = function(user) {

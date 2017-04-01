@@ -1,5 +1,5 @@
 doctype html
-html
+html(class=isGrayBackground ? 'bg-gray' : '')
 	head
 		title #{title}
 		block scripts
@@ -10,7 +10,21 @@ html
 		link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i')
 		
 	body
-		block header
+		#header
+			.left
+				#logo
+					a(href='/') Vocapin
 
-		div.container
-			block content
+			if (user)
+				.right
+					a(href='/profile').menu-item Profile Page
+			else
+				.right
+					a(href='/login').menu-item Log In
+					a(href='/signup').menu-item Sign Up
+
+			.clear
+
+		#content
+			div.container
+				block content

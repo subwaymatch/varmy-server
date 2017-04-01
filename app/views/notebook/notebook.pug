@@ -1,17 +1,13 @@
 extends ../layout.pug
 
-block header
-	div.container
-		div.desktop-12.column
-			.logo-img-wrapper
-				a(href='/')
-					img.logo(src='images/logo_vocapin.png')
-
-			h1= notebook.title
-	
 block content
-	.desktop-12.column
-		.list-vocabularies
-			each vocabulary in notebook.list
-				h4= vocabulary.word
-				p= vocabulary.definition
+	.list-vocabularies
+		each vocabulary in notebook.list
+			.item
+				.desktop-4.column
+					h4= vocabulary.word
+
+				.desktop-8.column
+					p= vocabulary.definition
+
+				.clear

@@ -1,6 +1,6 @@
-var Notes = {}; 
+const NoteBook = require('./../models/NoteBook');
 
-const notebook = require('./../tests/vocab-data'); 
+let Notes = {};
 
 Notes.renderUserNotes = function(req, res) {
 	res.render('user/notes', {
@@ -9,9 +9,11 @@ Notes.renderUserNotes = function(req, res) {
 };
 
 Notes.renderNoteBook = function(req, res) {
-	res.render('notebook/notebook', {
-		user: req.user, 
-		notebook: notebook
+	NoteBook.getById(3, function(notebook) {
+		res.render('notebook/notebook', {
+			user: req.user,
+			notebook: notebook
+		});
 	});
 }; 
 

@@ -20,16 +20,16 @@
 html {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#49e1df+0,5695e7+100 */
 	background: #49e1df; /* Old browsers */
-	background: -moz-linear-gradient(top, #49e1df 0%, #5695e7 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #49e1df 0%,#5695e7 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #49e1df 0%,#5695e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: -moz-linear-gradient(top, #1db6df 0%, #0c5996 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #1db6df 0%,#0c5996 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #1db6df 0%,#0c5996 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49e1df', endColorstr='#5695e7',GradientType=0 ); /* IE6-9 */
-	min-height: 100%; 
+	min-height: 100%;
 }
 
 body {
 	color: #fff;
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	font-size: 28px;
 	line-height: 46px;
 	font-weight: 300; 
@@ -54,7 +54,7 @@ body {
 /* Links */
 a,
 a:visited {
-	color: #fff; 
+	color: #fff;
 	text-decoration: none;
 	outline: 0;
 }
@@ -249,8 +249,60 @@ b, strong { font-weight: bold; }
 	}
 
 
+
+
+#content {
+	padding-top: 50px;
+}
+
+
+
+#header {
+	color: #444;
+	background: #fff;
+	position: relative;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+	#header a {
+		display: inline-block;
+		line-height: 16px;
+		font-weight: 700;
+		color: #777;
+	}
+
+		#header a.menu-item:hover {
+			color: #1db6df;
+		}
+
+	#header #logo {
+		display: inline-block;
+		float: left;
+		padding: 35px 40px;
+	}
+
+	#header .left {
+		float: left;
+	}
+
+	#header .right {
+		float: right;
+	}
+
+	#header .menu-item {
+		padding: 35px 40px;
+	}
+
+		#header .right .menu-item {
+			border-left: 1px solid #eee;
+		}
+
+
+
+
 .logo-img-wrapper {
-	margin-top: 60px; 
+	margin-top: 60px;
 	text-align: center;
 }
 
@@ -295,7 +347,7 @@ form.user-form {
 	.list-notes .item {
 		display: block; 
 		padding: 40px 0; 
-		border-bottom: 1px solid #fff; 
+		border-bottom: 1px solid #1db6df;
 		position: relative; 
 	}
 
@@ -323,3 +375,16 @@ form.user-form {
 		.list-notes .button.price.free {
 			color: #aaa; 
 		}
+
+.list-vocabularies {
+	font-size: 20px;
+	line-height: 34px;
+	font-weight: 300;
+}
+	.list-vocabularies .item {
+		margin-top: 10px;
+	}
+
+	.list-vocabularies h4 {
+		font-weight: 400;
+	}

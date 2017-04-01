@@ -1,7 +1,7 @@
 const passport = require('passport');
 const User = require('./../models/User'); 
 
-var UserController = {}; 
+let UserController = {};
 
 UserController.renderLogInPage = function(req, res) {
 	res.render('user/login');
@@ -38,7 +38,7 @@ UserController.logout = function(req, res) {
 
 UserController.renderProfilePage = function(req, res) {
 	res.render('user/profile', {
-		email: req.user.email
+		user: req.user
 	});
 };
 
